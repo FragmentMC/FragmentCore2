@@ -18,7 +18,7 @@ public class Discord implements CommandExecutor, Listener {
         if (!(sender instanceof Player)) return true;
         Player player = (Player) sender;
 
-        player.sendMessage(ChatColor.translateAlternateColorCodes('&', Helper.getConfigString("cosmetic", "discord-invite")));
+        player.sendMessage(ChatColor.translateAlternateColorCodes('&', Helper.ParsePrefix(Helper.getConfigString("cosmetic", "discord-invite"))));
         return true;
     }
 }
