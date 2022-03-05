@@ -14,7 +14,6 @@ public class WaterproofRedstone implements Listener {
     @EventHandler(priority = EventPriority.HIGHEST)
     public void onBlockFromTo(BlockFromToEvent event) {
         Material mat = event.getToBlock().getType();
-        Bukkit.getLogger().info(mat.name());
         if (Helper.waterproofBlocks.contains(mat) || Helper.buttonsSlow.contains(mat) || Helper.buttonsFast.contains(mat)) {
             event.setCancelled(true);
         }

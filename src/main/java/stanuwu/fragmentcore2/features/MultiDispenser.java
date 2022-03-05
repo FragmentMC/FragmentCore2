@@ -106,7 +106,6 @@ public class MultiDispenser implements CommandExecutor, Listener, TabCompleter {
                 Location summonLoc = event.getBlock().getRelative(((Directional)event.getBlock().getBlockData()).getFacing()).getLocation().add(0.5, 0, 0.5);
                 Material summonMat = event.getItem().getType();
                 if (summonMat.equals(Material.TNT)) {
-                    Bukkit.getLogger().info("TNT");
                     for (int i = 0; i < amount; i++) {
                         TNTPrimed tnt = (TNTPrimed)world.spawnEntity(summonLoc, EntityType.PRIMED_TNT);
                         tnt.setFuseTicks(fuse);
@@ -114,7 +113,6 @@ public class MultiDispenser implements CommandExecutor, Listener, TabCompleter {
                     }
                     event.setCancelled(true);
                 } else if (Helper.fallingBlocks.contains(summonMat)) {
-                    Bukkit.getLogger().info("SAND");
                     for (int i = 0; i < amount; i++) {
                         world.spawnFallingBlock(summonLoc, summonMat.createBlockData());
                     }
