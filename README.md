@@ -1,7 +1,7 @@
 # FragmentCore2
 1.17.1 Cannoning Core
 A lot of code was taken from the original fragment core (https://github.com/stanuwu/FragmentCore).
-Contributors: Little_, bantuerfei
+> Contributors: Little_, bantuerfei
 
 # Features
 - Discord Command
