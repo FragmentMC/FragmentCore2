@@ -1,0 +1,25 @@
+fragmentcore:
+  cannoning:
+    tntfill-range: 32
+    clearentity-range: 32
+    max-multitnt: 50000
+    protection-blocks:
+      - "emerald_block"
+      - "coal_block"
+    unbreakable-blocks:
+      - "diamond_block"
+    no-tile-drops: true
+    stackremover-item: "bone"
+    stackremover-range: 100
+    tickcounter-item: "blaze_rod"
+    entitytracker-item: "iron_sword"
+    magicsand-block: "beacon"
+  cosmetic:
+    message-prefix: "&7[&a+&7]&f "
+    discord-invite: "%prefix%example.url"
+    enable-automated-messages: true
+    join-message: "%prefix%Welcome back %player%!"
+    global-join-message: "&8[&a+&8] &f %player%"
+    global-leave-message: "&8[&c-&8] &f %player%"
+    magicsand-name: "&f[&aMagicSand&f]"
+    multidispenser-name: "&f[&aMultiDispenser&f] [&7Amount:&a%amount%&7, &7Fuse:&a%fuse%&f]"

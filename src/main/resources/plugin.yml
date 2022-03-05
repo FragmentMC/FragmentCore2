@@ -1,0 +1,61 @@
+name: FragmentCore2
+version: '${project.version}'
+main: stanuwu.fragmentcore2.FragmentCore2
+api-version: 1.17
+authors: [ jesus_is_hot ]
+description: Core Plugin for Cannoning Servers
+commands:
+  tntfill:
+    description: Fills nearby Dispensers with TNT
+    usage: </command>
+    aliases:
+      - tf
+    permission: fragmen.tntfill
+  magicsand:
+    description: Gives a MagicSand placer
+    usage: </command> <block>
+    aliases:
+      - ms
+      - sandbot
+      - placersand
+      - sandplacer
+      - stacker
+    permission: fragment.magicsand
+  discord:
+    description: Discord invite
+    usage: </command>
+    permission: fragment.discord
+  ce:
+    description: Clears nearby Entities
+    usage: </command>
+    aliases:
+      - clearentities
+    permission: fragment.clearentities
+  fire:
+    description: Presses the last pressed button
+    usage: </command>
+    permission: fragment.fire
+  lever:
+    description: Flicks the last pressed lever
+    usage: </command>
+    permission: fragment.lever
+  ct:
+    description: Removes all block/sand/tnt trackers
+    usage: </command>
+    aliases:
+      - cleartracker
+    permission: fragment.cleartracker
+  multi:
+    description: Gives you a multi dispenser with given parameters
+    usage: </command> <amount> <fuse>
+    aliases:
+      - multidispenser
+      - md
+    permission: fragment.multidispenser
+  reload:
+    description: Reloads FragmentCore2
+    usage: </command>
+    aliases:
+      - fragmentreload
+      - reloadfragment
+    permission: fragment.reload
