@@ -10,7 +10,7 @@ commands:
     usage: </command>
     aliases:
       - tf
-    permission: fragmen.tntfill
+    permission: fragment.tntfill
   magicsand:
     description: Gives a MagicSand placer
     usage: </command> <block>
