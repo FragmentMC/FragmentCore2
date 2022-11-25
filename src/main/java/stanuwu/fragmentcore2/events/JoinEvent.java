@@ -25,7 +25,7 @@ public class JoinEvent implements Listener {
 
     @EventHandler
     public void onLeave(PlayerQuitEvent event) {
-        if (FragmentCore2.config.getBoolean("enable-automated-messages")) {
+        if (FragmentCore2.config.getBoolean("fragmentcore.cosmetic.enable-automated-messages")) {
             Player player = event.getPlayer();
             for (Player online_players : Bukkit.getOnlinePlayers()) {
                 online_players.sendMessage(ChatColor.translateAlternateColorCodes('&',Helper.ParsePrefix(Helper.getConfigString("cosmetic", "global-leave-message").replaceAll("%player%", player.getDisplayName()))));
