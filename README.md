@@ -1,12 +1,12 @@
 # FragmentCore2
-1.17.1 Cannoning Core
+1.19.1 Cannoning Core
 A lot of code was taken from the original fragment core (https://github.com/stanuwu/FragmentCore).
 > Contributors: Little_, bantuerfei
 
 # Features
 - Discord Command
 - Clear Entities
-- /Fire Command
+- Fire Command
 - Lever Command
 - TNTFill Command
 - Magic Sand

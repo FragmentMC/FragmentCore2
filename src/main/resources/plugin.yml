@@ -1,7 +1,7 @@
 name: FragmentCore2
 version: '${project.version}'
 main: stanuwu.fragmentcore2.FragmentCore2
-api-version: 1.17
+api-version: 1.19
 authors: [ jesus_is_hot ]
 description: Core Plugin for Cannoning Servers
 commands:
