@@ -128,8 +128,8 @@ public class MultiDispenser implements CommandExecutor, Listener, TabCompleter {
         if (!event.isCancelled()) {
             if (event.getBlock().getType() == Material.DISPENSER) {
                 Map<Enchantment, Integer> enchants = event.getItemInHand().getEnchantments();
-                int amount = enchants.get(Enchantment.PROTECTION_EXPLOSIONS);
-                int fuse = enchants.get(Enchantment.DURABILITY);
+                int amount = enchants.getOrDefault(Enchantment.PROTECTION_EXPLOSIONS, 0);
+                int fuse = enchants.getOrDefault(Enchantment.DURABILITY, 0);
                 if (event.getItemInHand().equals(getDispenser(amount, fuse))) {
                     Player player = event.getPlayer();
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&', Helper.WithPrefix(String.format("Placed MultiDispenser [Amount: %s, Fuse:%s]", amount, fuse))));
