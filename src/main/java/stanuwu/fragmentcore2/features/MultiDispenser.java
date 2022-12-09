@@ -20,6 +20,7 @@ import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.inventory.ItemFlag;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
+import org.bukkit.material.MaterialData;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 import stanuwu.fragmentcore2.FragmentCore2;
@@ -126,10 +127,10 @@ public class MultiDispenser implements CommandExecutor, Listener, TabCompleter {
     public void onBlockPlace(BlockPlaceEvent event) {
         if (!event.isCancelled()) {
             if (event.getBlock().getType() == Material.DISPENSER) {
-                ItemStack handItem = event.getItemInHand();
-                int amount = handItem.getEnchantmentLevel(Enchantment.PROTECTION_EXPLOSIONS);
-                int fuse = handItem.getEnchantmentLevel(Enchantment.DURABILITY);
-                if (handItem.equals(getDispenser(amount, fuse))) {
+                Map<Enchantment, Integer> enchants = event.getItemInHand().getEnchantments();
+                int amount = enchants.get(Enchantment.PROTECTION_EXPLOSIONS);
+                int fuse = enchants.get(Enchantment.DURABILITY);
+                if (event.getItemInHand().equals(getDispenser(amount, fuse))) {
                     Player player = event.getPlayer();
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&', Helper.WithPrefix(String.format("Placed MultiDispenser [Amount: %s, Fuse:%s]", amount, fuse))));
                     dispensers.put(event.getBlock().getLocation(), Arrays.asList(amount, fuse));
@@ -165,9 +166,7 @@ public class MultiDispenser implements CommandExecutor, Listener, TabCompleter {
         if(!event.isCancelled()) {
             event.blockList().forEach(b -> {
                 if(b.getType().equals(Material.DISPENSER)) {
-                    if (dispensers.containsKey(b.getLocation())) {
-                        dispensers.remove(b.getLocation());
-                    }
+                    dispensers.remove(b.getLocation());
                 }
             });
         }
