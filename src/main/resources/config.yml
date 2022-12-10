@@ -17,6 +17,7 @@ fragmentcore:
   cosmetic:
     message-prefix: "&7[&a+&7]&f "
     discord-invite: "%prefix%example.url"
+    upload-message: "%prefix%https://schem.intellectualsites.com/fawe/"
     enable-automated-messages: true
     join-message: "%prefix%Welcome back %player%!"
     global-join-message: "&8[&a+&8] &f %player%"

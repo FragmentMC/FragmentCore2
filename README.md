@@ -25,6 +25,7 @@ A lot of code was taken from the original fragment core (https://github.com/stan
 Command | Permission
 - /magicsand | fragment.magicsand
 - /discord | fragment.discord
+- /upload | fragment.upload
 - /ce | fragment.clearentities
 - /fire | fragment.fire
 - /lever | fragment.lever

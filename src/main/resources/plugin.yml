@@ -25,6 +25,10 @@ commands:
     description: Discord invite
     usage: </command>
     permission: fragment.discord
+  upload:
+    description: Schematic upload link
+    usage: </command>
+    permission: fragment.upload
   ce:
     description: Clears nearby Entities
     usage: </command>
