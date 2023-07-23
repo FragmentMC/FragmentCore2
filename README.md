@@ -1,5 +1,5 @@
 # FragmentCore2
-1.19.2 Cannoning Core
+1.20.1 Cannoning Core
 
 A lot of code was taken from the original fragment core (https://github.com/stanuwu/FragmentCore).
 > Contributors: Little_, bantuerfei
