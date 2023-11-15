@@ -9,6 +9,7 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityExplodeEvent;
+import stanuwu.fragmentcore2.Config;
 import stanuwu.fragmentcore2.FragmentCore2;
 
 import java.util.Iterator;
@@ -22,7 +23,7 @@ public class ProtectionBlocks implements Listener {
             World world = explosionLoc.getWorld();
             for (int y = -64; y <= 320; y++) {
                 Material materialType = world.getBlockAt(explosionLoc.getBlockX(), y, explosionLoc.getBlockZ()).getType();
-                if(FragmentCore2.config.getStringList("fragmentcore.cannoning.protection-blocks").contains(materialType.name().toLowerCase())){
+                if(Config.protectedBlocks.contains(materialType)){
                     isProtected = true;
                     break;
                 }
@@ -34,13 +35,13 @@ public class ProtectionBlocks implements Listener {
                 while(iterator.hasNext())
                 {
                     Block b = iterator.next();
-                    if(FragmentCore2.config.getStringList("fragmentcore.cannoning.unbreakable-blocks").contains(b.getType().name().toLowerCase())){
+                    if(Config.unbreakableBlocks.contains(b.getType())){
                         iterator.remove();
                         continue;
                     }
                     for (int y = -64; y <= 320; y++) {
                         Material materialType = world.getBlockAt(b.getX(), y, b.getZ()).getType();
-                        if(FragmentCore2.config.getStringList("fragmentcore.cannoning.protection-blocks").contains(materialType.name().toLowerCase())){
+                        if(Config.protectedBlocks.contains(materialType)){
                             iterator.remove();
                             break;
                         }
